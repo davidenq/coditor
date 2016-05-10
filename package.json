@@ -1,6 +1,6 @@
 {
   "name": "coditor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "coditor is a multi-tab code editor as a web component based on riot.js and ace.js",
   "main": "./coditor.tag",
   "scripts": {
