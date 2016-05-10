@@ -1,0 +1,26 @@
+{
+  "name": "coditor",
+  "version": "0.0.1",
+  "description": "coditor is a multi-tab code editor as a web component based on riot.js and ace.js",
+  "main": "./coditor.tag",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidenq/coditor.git"
+  },
+  "keywords": [
+    "code",
+    "editor",
+    "ace.js",
+    "riot.js",
+    "webcomponents"
+  ],
+  "author": "davidenq <davip@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidenq/coditor/issues"
+  },
+  "homepage": "https://github.com/davidenq/coditor#readme"
+}
