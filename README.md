@@ -107,6 +107,7 @@ When you mount a tag of riot you must pass, in the second argument, options as a
 ```
 **_Screenshot_**
 
+![example1](https://raw.githubusercontent.com/davidenq/coditor/master/img/coditor1.png)
 
 #### Multiple tabs.
 
@@ -149,6 +150,9 @@ When you mount a tag of riot you must pass, in the second argument, options as a
 ```
 **_Screenshot_**
 
+![example2](https://raw.githubusercontent.com/davidenq/coditor/master/img/coditor2.png)
+
+![example3](https://raw.githubusercontent.com/davidenq/coditor/master/img/coditor3.png)
 
 ### How to use (Server side)
 
