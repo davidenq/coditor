@@ -2,6 +2,8 @@
 
 coditor is a multi-tab code editor as a web component based on [riot.js](http://riotjs.com/) and [ace.js](https://ace.c9.io/#nav=about)
 
+[try online](http://plnkr.co/edit/4rhHUTo2VQlzDaMIlAmu)
+
 ### installation
 `bower install coditor --save`
 
