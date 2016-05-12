@@ -142,6 +142,13 @@
         .cc-tabs > .tab0:checked ~ ul .tab0,
         .cc-tabs > .tab1:checked ~ ul .tab1,
         .cc-tabs > .tab2:checked ~ ul .tab2,
+        .cc-tabs > .tab3:checked ~ ul .tab3,
+        .cc-tabs > .tab4:checked ~ ul .tab4,
+        .cc-tabs > .tab5:checked ~ ul .tab5,
+        .cc-tabs > .tab6:checked ~ ul .tab6,
+        .cc-tabs > .tab7:checked ~ ul .tab7,
+        .cc-tabs > .tab8:checked ~ ul .tab8,
+        .cc-tabs > .tab9:checked ~ ul .tab9,
         .cc-tabs > .tab-content-last:checked ~ ul .tab-content-last {
           z-index: 1;
           top: 0;
@@ -154,6 +161,13 @@
         .cc-tabs-height-auto > .tab0:checked ~ ul .tab0,
         .cc-tabs-height-auto > .tab1:checked ~ ul .tab1,
         .cc-tabs-height-auto > .tab2:checked ~ ul .tab2,
+        .cc-tabs-height-auto > .tab3:checked ~ ul .tab3,
+        .cc-tabs-height-auto > .tab4:checked ~ ul .tab4,
+        .cc-tabs-height-auto > .tab5:checked ~ ul .tab5,
+        .cc-tabs-height-auto > .tab6:checked ~ ul .tab6,
+        .cc-tabs-height-auto > .tab7:checked ~ ul .tab7,
+        .cc-tabs-height-auto > .tab8:checked ~ ul .tab8,
+        .cc-tabs-height-auto > .tab9:checked ~ ul .tab9,
         .cc-tabs-height-auto > .tab-content-last:checked ~ ul .tab-content-last {
           display: block;
         }
