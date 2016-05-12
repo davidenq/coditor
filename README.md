@@ -1,5 +1,8 @@
 # Coditor
 
+[![NPM](https://img.shields.io/npm/v/hapi-routes-loader.svg)](https://www.npmjs.com/package/coditor)
+[![Downloads](https://img.shields.io/npm/dm/hapi-routes-loader.svg)](http://npm-stat.com/charts.html?package=coditor)
+
 coditor is a multi-tab code editor as a web component based on [riot.js](http://riotjs.com/) and [ace.js](https://ace.c9.io/#nav=about)
 
 [try online](http://plnkr.co/edit/4rhHUTo2VQlzDaMIlAmu?p=preview)
@@ -71,6 +74,37 @@ When you mount a tag of riot you must pass, in the second argument, options as a
       - editor [Object]:
 	      - id [String]: Allow identify a editor into tab
 	      - code [String] (optional): is a code or algorithm.
+
+### Important
+
+coditor manually  lets you add 10 tabs (manually was added into css style). But if you want to add more tabs, you must add css style manually in two places.
+```css
+.....
+.....
+....
+.cc-tabs > .tab7:checked ~ ul .tab7,
+.cc-tabs > .tab8:checked ~ ul .tab8,
+.cc-tabs > .tab9:checked ~ ul .tab9,
+
+you must add another line With the same syntax shown above.
+....
+....
+```
+
+```css
+.....
+.....
+....
+.cc-tabs-height-auto > .tab7:checked ~ ul .tab7,
+.cc-tabs-height-auto > .tab8:checked ~ ul .tab8,
+.cc-tabs-height-auto > .tab9:checked ~ ul .tab9,
+
+.....
+.....
+....
+```
+
+Any ideas to changes this behavior?
 
 ### Examples
 
