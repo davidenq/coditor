@@ -1,7 +1,7 @@
 # Coditor
 
-[![NPM](https://img.shields.io/npm/v/hapi-routes-loader.svg)](https://www.npmjs.com/package/coditor)
-[![Downloads](https://img.shields.io/npm/dm/hapi-routes-loader.svg)](http://npm-stat.com/charts.html?package=coditor)
+[![NPM](https://img.shields.io/npm/v/coditor.svg)](https://www.npmjs.com/package/coditor)
+[![Downloads](https://img.shields.io/npm/dm/coditor.svg)](http://npm-stat.com/charts.html?package=coditor)
 
 coditor is a multi-tab code editor as a web component based on [riot.js](http://riotjs.com/) and [ace.js](https://ace.c9.io/#nav=about)
 
