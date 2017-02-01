@@ -4,9 +4,9 @@ import VueResource from 'vue-resource'
 import Codemirror from 'codemirror/lib/codemirror.js'
 import config from './config.json'
 import modejs from 'codemirror/mode/javascript/javascript.js'
-import clike from 'codemirror/mode/clike/clike.js'
 import css from 'codemirror/lib/codemirror.css'
-import monokai from 'codemirror/theme/monokai.css'
+// import clike from 'codemirror/mode/clike/clike.js'
+// import monokai from 'codemirror/theme/monokai.css'
 
 Vue.use(VueResource)
 let internals = {}
@@ -18,7 +18,6 @@ internals.vars = {
   lineNumbers: config.lineNumbers,
   init: config.init
 }
-console.log(internals.vars.httpConfig)
 if (window.coditor === undefined) {
   window.coditor = {}
 }
@@ -29,7 +28,7 @@ internals.vars.configs = (window.coditor.cfg !== undefined) ? window.coditor.cfg
 internals.loadCodeMirror = (() => {
   window.CodeMirror = Codemirror
   window.modejs = modejs
-  window.clike = clike
+  // window.clike = clike
   // add support to a new programming language
 })()
 

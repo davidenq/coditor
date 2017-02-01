@@ -79,7 +79,7 @@
       .$http[type.toLowerCase()](url, data)
       .then(function (response) {
         // response
-        console.log(response)
+        // console.log(response)
       }, function (err) {
         if (err) {
           // err
@@ -143,7 +143,6 @@
     cursor: pointer;
     transition:all 0.8s, color 0.2s 0.2s;
     border-radius: 0.25em;
-    
   }
   .button:hover {
     background: #181d25;

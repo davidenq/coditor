@@ -1,5 +1,5 @@
 {
-  "theme": "monokai",
+  "theme": "coditor",
   "lineNumbers": true,
   "http": {
     "url": "http://localhost:8080/post",
