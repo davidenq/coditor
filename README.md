@@ -20,6 +20,10 @@ Coditor is a multi-tab code editor as a component with extra features, now based
 - Hack this webcomponent and customized with its own features.
 - Now you can work in mode development or generate assets for production. This is possible thanks to vue-template that containt several developement enviroments (test, build, dev)
 
+## Try online
+
+[click here](https://embed.plnkr.co/cuXFBw/)
+
 ## Install
 
 1. Install coditor
@@ -202,26 +206,9 @@ Example advanced setting:
 
 ## Screenshots
 
-
-
-## Issue 
-
-If you want start with a piece of code that contains single or double quotes then, you must use backslash to introduce a special character to avoid this conflict. For example
-
-```javascript
-
-function hello (value) {
-  var name = 'Coditor'
-  return value + ' ' + name;
-}
-```
-
-```javascript
-function hello (value) {
-  var name = \'Coditor\'
-  return value + \' \' + name
-}
-```
+![image1](https://cdn.rawgit.com/davidenq/coditor/bdae8467/img/coditor1.png)
+![image2](https://cdn.rawgit.com/davidenq/coditor/bdae8467/img/coditor2.png)
+![image3](https://cdn.rawgit.com/davidenq/coditor/bdae8467/img/coditor3.png)
 
 ## Contributing
 
