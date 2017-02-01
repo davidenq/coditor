@@ -3,7 +3,7 @@
 - A extensive documentation to development new features, examples, and put on production.
 - Making web request and handle response using vue-resource.
 - Add dinamic tabs
-- Select language dinamically for each tab
+- Select the programming language dynamically for each tab that was created. Also include download or load script dependencies dynamically.
 
 > Important: Coditor intented to be a independent webcomponent. The original idea is to be a multitab code editor, no more, no less.
 

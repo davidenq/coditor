@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>coditor</title>
+  </head>
+
+  <body>
+    <coditor></coditor>
+    <!-- built files will be auto injected 
+    https://jsperf.com/javascript-multiline-regexp
+    -->
+    <script>
+    window.coditor = {}
+
+    coditor.cfg = [{
+      name: 'Tab 1',
+      value: 'function heloWorld () {\n  var name = "Coditor";\n  console.log(name);\n ;\n}',
+      mode: 'javascript',
+      lineNumbers: false
+    }, {
+      name: 'Tab 2',
+      value: 'public class HelloWorld {\n    public static void main(String[] args) {\n       // Prints "Hello, World" to the terminal window.\n       System.out.println("Hello, World");\n    }\n}',
+      mode: 'text/x-java',
+      theme: 'monokai'
+    }];
+    </script>
+  </body>
+</html>

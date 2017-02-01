@@ -16,10 +16,12 @@
     "url": "git+https://github.com/davidenq/coditor.git"
   },
   "dependencies": {
+    "codemirror": "^5.23.0",
     "vue": "^2.1.0",
     "vue-resource": "^1.0.3"
   },
   "devDependencies": {
+    "body-parser": "^1.16.0",
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.0.0",
     "babel-eslint": "^7.0.0",

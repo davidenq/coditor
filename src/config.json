@@ -1,0 +1,16 @@
+{
+  "theme": "monokai",
+  "lineNumbers": true,
+  "http": {
+    "url": "http://localhost:8080/post",
+    "type": "post",
+    "options": {
+      "emulateHTTP": true,
+      "emulateJSON": true
+      }
+  },
+  "init": {
+    "name": "tab init",
+    "mode": "javascript"
+  }
+}
