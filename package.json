@@ -1,6 +1,6 @@
 {
   "name": "coditor",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "coditor is a multi-tab code editor with extra feature as a web component based on vuejs and codemirror",
   "author": "David Núñez <davip@live.com>",
   "private": false,
