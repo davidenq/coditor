@@ -7,23 +7,39 @@ import modejs from 'codemirror/mode/javascript/javascript.js'
 import css from 'codemirror/lib/codemirror.css'
 // import clike from 'codemirror/mode/clike/clike.js'
 // import monokai from 'codemirror/theme/monokai.css'
+let internals = {}
 
 Vue.use(VueResource)
-let internals = {}
-internals.vars = {
-  nameTabs: [],
-  configs: [],
-  httpConfig: (config.http === undefined) ? null : config.http,
-  theme: (config.theme === '') ? 'coditor' : config.theme,
-  lineNumbers: config.lineNumbers,
-  init: config.init
-}
+
 if (window.coditor === undefined) {
   window.coditor = {}
 }
 
-internals.vars.configs = (window.coditor.cfg !== undefined) ? window.coditor.cfg : [{name: internals.vars.init.name, mode: internals.vars.init.mode}]
-// internals.vars.httpConfig = (window.coditor.http !== undefined) ? window.coditor.http : null
+internals.vars = {
+  nameTabs: [],
+  configs: [],
+  httpConfig: (
+    config.http.url === undefined ||
+    config.http.type === undefined ||
+    config.http.url === '' ||
+    config.http.type === '') ? ((
+      window.coditor.http === undefined ||
+      window.coditor.http.url === undefined ||
+      window.coditor.http.type === undefined ||
+      window.coditor.http.url === '' ||
+      window.coditor.http.type === '')
+      ? null : window.coditor.http) : config.http,
+  theme: (config.theme === '') ? 'coditor' : config.theme,
+  lineNumbers: config.lineNumbers,
+  init: config.init
+}
+
+internals.vars.configs = (window.coditor.cfg !== undefined)
+? window.coditor.cfg : [{
+  name: internals.vars.init.name,
+  mode: internals.vars.init.mode,
+  value: internals.vars.init.value !== undefined ? internals.vars.init.value : ''
+}]
 
 internals.loadCodeMirror = (() => {
   window.CodeMirror = Codemirror
@@ -46,7 +62,10 @@ internals.initialConfig = (() => {
           break
         default:
           /*
-          This options by default does not set in codemirror, but coditor if set this values as long as it was not specified in the props. But if the user it put this options in the props for one or a few or all tabs, this configurations just will be set in the tab or tabs not specified.
+          This options by default does not set in codemirror, but coditor if set this values
+          as long as it was not specified in the props. But if the user it put this options
+          in the props for one or a few or all tabs, this configurations just will be set
+          in the tab or tabs not specified.
           */
           if (undefined === config['lineNumbers']) {
             config['lineNumbers'] = internals.vars.lineNumbers
