@@ -3,6 +3,8 @@
 [![NPM](https://img.shields.io/npm/v/coditor.svg)](https://www.npmjs.com/package/coditor)
 [![Downloads](https://img.shields.io/npm/dm/coditor.svg)](http://npm-stat.com/charts.html?package=coditor)
 
+See [CHANGELOG](https://github.com/davidenq/coditor/blob/master/CHANGELOG.md) to see more about recently changes.
+
 ## Important
 
 > If you are interested in the old version, please select coditor-old branch in this repo.
@@ -45,8 +47,6 @@ npm run dev
 ```
 
 Your browser will be automatically launch into `http://localhost:8080`. By default is set javascript language, but if you need to add a new language, You need to add some line codes in ` main.js`. See how to customize coditor.
-
-Also, see how to customize 
 
 ## Customize coditor for building assets
 
