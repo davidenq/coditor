@@ -2,8 +2,8 @@
   "theme": "coditor",
   "lineNumbers": true,
   "http": {
-    "url": "http://localhost:8080/post",
-    "type": "post",
+    "url": "",
+    "type": "",
     "options": {
       "emulateHTTP": true,
       "emulateJSON": true
@@ -11,6 +11,7 @@
   },
   "init": {
     "name": "tab init",
-    "mode": "javascript"
+    "mode": "javascript",
+    "value": "function helloWorld () {\n  console.log('Coditor');\n}"
   }
 }
