@@ -15,7 +15,7 @@
 
     coditor.cfg = [{
       name: 'Tab 1',
-      value: 'function heloWorld () {\n  var name = "Coditor";\n  console.log(name);\n ;\n}',
+      value: 'function helloWorld () {\n  var name = "Coditor";\n  console.log(name);\n ;\n}',
       mode: 'javascript',
       lineNumbers: false
     }, {
@@ -24,6 +24,11 @@
       mode: 'text/x-java',
       theme: 'monokai'
     }];
+
+    coditor.http = {
+      url: 'http://localhost:8080/post',
+      type: 'get'
+    }
     </script>
   </body>
 </html>
