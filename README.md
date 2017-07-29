@@ -3,11 +3,11 @@
 [![NPM](https://img.shields.io/npm/v/coditor.svg)](https://www.npmjs.com/package/coditor)
 [![Downloads](https://img.shields.io/npm/dm/coditor.svg)](http://npm-stat.com/charts.html?package=coditor)
 
-See [CHANGELOG](https://github.com/davidenq/coditor/blob/master/CHANGELOG.md) to see more about recently changes.
+[CHANGELOG](https://github.com/davidenq/coditor/blob/master/CHANGELOG.md) to see more about recently changes.
 
 ## Important
 
-> If you are interested in the old version, please select coditor-old branch in this repo.
+> If you are interested in the old version, select coditor-old branch in this repo.
 if there is something that you think needs to be add on coditor, open an issue to have a discussion about that.
 
 ## Introduction
@@ -17,10 +17,10 @@ Coditor is a multi-tab code editor as a component with extra features, now based
 ## Features
 
 - Support a programming language for each tab (see [here](https://codemirror.net/mode/index.html) a list supported by codemirror)
-- Optional, making web request and handle response using vue-resource
-- Select a theme via setting for each tab or a single theme via a global setting for all tabs. (see [here](https://codemirror.net/theme/) a list of themes for codemirror). Coditor has its own theme called with the same name. By default it is set this theme, but you can customize this theme or select other theme.
+- Optional, you can make web request and handle response using vue-resource
+- Select a theme via setting for each tab or a single theme via a global setting for all tabs. (see [here](https://codemirror.net/theme/) a list of themes for codemirror). Coditor has its own theme called with the same name. By default is set this theme, but you can customize this theme or select other theme.
 - Hack this webcomponent and customized with its own features.
-- Now you can work in mode development or generate assets for production. This is possible thanks to vue-template that containt several developement enviroments (test, build, dev)
+- Now you can work in mode development or generate assets for production. This is possible thanks to vue-template that contain several developement environments (test, build, dev)
 
 ## Try online
 
@@ -46,20 +46,20 @@ cd coditor && npm install
 npm run dev
 ```
 
-Your browser will be automatically launch into `http://localhost:8080`. By default is set javascript language, but if you need to add a new language, You need to add some line codes in ` main.js`. See how to customize coditor.
+Your browser will be automatically launch into `http://localhost:8080`. By default is set javascript language, but if you need to add a new language, you need to add some line codes in ` main.js`. See how to customize coditor.
 
 ## Customize coditor for building assets
 
-You need to customize your own preferences for coditor. This include: 
+You need to customize your own preferences for coditor. This include:
  - switch to another theme if you want (by default coditor theme) (optional).
- - add new themes for each tabs (optional).
+ - add a new themes for each tabs (optional).
  - add libraries for each programing languages that will be supported to your specific requirements.
 
 ### Switch to another theme (for all tabs)
 
 
 1. Import theme into `main.js` inside the `src` folder.
-   - all themes are inside `node_modules/codemirror/theme/` So, you must import like any other js module. For example: 
+   - all themes are inside `node_modules/codemirror/theme/` So, you must import like any other js module. For example:
    ```javascript
    //import monokai theme
    import monokai from 'codemirror/theme/monokai.css'
@@ -68,13 +68,13 @@ You need to customize your own preferences for coditor. This include:
 
 ### Add a new theme (for each tabs)
 
-1. See literal 1 of Switch to another theme. You must import each themes that you want to use.
+1. See literal 1 to switch to another theme. You must import each themes that you want to use.
 
-2. You must specified for each props the theme that you want to use. (see props for coditor)
+2. You must specify for each props the theme that you want to use. (see props for coditor)
 
 ### Add libraries for each programming languages
 
-1. Into `main.js` inside the `src` folder you must import each library that coditor should be supported. See [here](https://codemirror.net/mode/index.html) all modes that support codemirror. For example:
+1. Into `main.js` inside the `src` folder you must import each library that coditor should be support. See [here](https://codemirror.net/mode/index.html) all modes that support codemirror. For example:
 
  - Example 1: Add support for c, c++ and c#
 s
@@ -104,9 +104,43 @@ Now, you can specify in props what programming language will be use for each tab
 
 ### How to use request handle with ajax using vue-resource (optional)
 
-Into `config.json` you must specified a type request (get, post, etc) and url. There are others settings for vue-resource (see [here](https://github.com/pagekit/vue-resource/tree/master/docs) more settings and type of request)
+Into `config.json` you must specify a type request (get, post, etc) and url.
 
-> In development mode you can test this option. When you click get the current editor information button you will be receive a response of the server and will be show in console. (only for methods get and post)
+For example:
+
+```json
+{
+  "theme": "coditor",
+  "lineNumbers": true,
+  "http": {
+    "url": "",
+    "type": "",
+    "options": {
+      "emulateHTTP": true,
+      "emulateJSON": true
+      }
+  },
+  "init": {
+    "name": "tab init",
+    "mode": "javascript",
+    "value": "function helloWorld () {\n  console.log('Coditor');\n}"
+  }
+}
+```
+
+Or via props you must speficy a type request (get, post, etc) and url.
+For example:
+```javscript
+coditor.http = {
+  url: 'http://localhost:8080/post',
+  type: 'get'
+}
+```
+
+There are others settings for vue-resource (see [here](https://github.com/pagekit/vue-resource/tree/master/docs) for more settings and type of request)
+
+
+> In development mode you can test this option. When you click get the current editor information button you will be receive a response from the server and it will be show in console. (only for methods get and post)
 
 
 ## Build assets
@@ -137,7 +171,7 @@ If you already built assets, continue with the tutorial. If you haven't already 
 </body>
 ```
 
-Now, you can execute your application and by default you will see only one tab with the options that you configured into `config.json`.
+Now, you can execute your application and by default you will see only one tab with the options that you configured into `config.json` or via props.
 
 ### minimum props
 
@@ -146,7 +180,7 @@ Now, you can execute your application and by default you will see only one tab w
 |[string]|name|a name whatever|
 |[string]|mode|language programming|
 
-If you want init with a piece of code, you must specified a third key:value in the configs:
+If you want init with a piece of code, you must specify a third `key:value` in settings:
 
 |type|key|value|
 |----|---|----|
@@ -156,9 +190,9 @@ See below the basic and advanced settings.
 
 ### Basic setting for each tab
 
-To a basic configuration for each tab, you must specified minimum two values. (name and mode)
+To a basic configuration for each tab, you must specify minimum two values. (name and mode)
 
-- Create a script tag and into window object add new javascript object called coditor and on coditor object add a new value type array that containt settings for each tab. Example:
+- Create a script tag and into window object add new javascript object called coditor and on coditor object add a new value type array that contain settings for each tab. Example:
 
 ```javascript
 <script>
@@ -176,7 +210,7 @@ To a basic configuration for each tab, you must specified minimum two values. (n
 ### Advanced setting for each tab
 
 To have more control over the each tab, see [here](https://codemirror.net/doc/manual.html) all configuration options for codemirror.
-(By default, theme is set with coditor theme and lineNumbers is true, but you can changes this values)
+(By default, theme is set with coditor theme and lineNumbers is true, but if you want, you can change this values)
 
 Example advanced setting:
 
@@ -198,10 +232,10 @@ Example advanced setting:
 
 ## `window.coditor` object
 
-`window.coditor` object containt two values:
+`window.coditor` object contain two values:
 
-- cfg: [array] that containt props
-- value: [object] containt data about the information that was captured when clicked button (get the current editor information)
+- cfg: [array] contain props
+- value: [object] contain data about the information that was captured when clicked button (get the current editor information)
 > whether you specified http config or not, also will be have the value information that was captured when clicked button get the current editor information.
 
 ## Screenshots
